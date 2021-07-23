@@ -8,7 +8,7 @@ const bubble_create = () => {
   let s = 100;
   let l = Math.round(Math.random() * 100);
   let bubbleNewColor = `hsl(${h},${s}%,${l}%)`;
-  let bubbleSize = Math.round(Math.random() * 500);
+  let bubbleSize = Math.round(Math.random() * 300);
   newBubble.style.background = bubbleNewColor;
   setTimeout(function() {
     if (bubbleSize < 15) bubbleSize = 15;
@@ -18,6 +18,15 @@ const bubble_create = () => {
 };
 
 // window.addEventListener('click', bubble_create);
-setTimeout(() => {
-  setInterval(bubble_create, 200);
-}, 3000);
+setInterval(() => bubble_create(), 200);
+
+let bubbleRemover = () => {
+  let bubbleToRemove = document.querySelector('.bubble');
+  bubbleToRemove.remove();
+};
+
+setTimeout(
+  () => setInterval(() => bubbleRemover(), 200),
+
+  5000
+);
