@@ -8,11 +8,12 @@ const bubble_create = () => {
   let s = 100;
   let l = Math.round(Math.random() * 100);
   let bubbleNewColor = `hsl(${h},${s}%,${l}%)`;
-  let bubbleSize = Math.round(Math.random() * 100) + 'px';
+  let bubbleSize = Math.round(Math.random() * 100);
   newBubble.style.background = bubbleNewColor;
   setTimeout(function() {
-    newBubble.style.width = bubbleSize;
-    newBubble.style.height = bubbleSize;
+    if (bubbleSize < 15) bubbleSize = 15;
+    newBubble.style.width = bubbleSize + 'px';
+    newBubble.style.height = bubbleSize + 'px';
   }, 1);
 };
 

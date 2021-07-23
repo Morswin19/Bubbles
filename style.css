@@ -1,9 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .main-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  position: relative;
+  background-color: #cccccc;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .bubble {
@@ -11,7 +22,13 @@
   height: 0px;
   -webkit-transition: 1s;
   transition: 1s;
+  border-radius: 50%;
   border: 0px solid #7AD9FF;
+  position: absolute;
+  left: 50vw;
+  top: 50vh;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
 }
 
 @-webkit-keyframes bubble-growth {
@@ -20,8 +37,8 @@
     height: 0px;
   }
   to {
-    width: 220px;
-    height: 196px;
+    width: 36px;
+    height: 255px;
   }
 }
 
@@ -31,8 +48,8 @@
     height: 0px;
   }
   to {
-    width: 220px;
-    height: 196px;
+    width: 36px;
+    height: 255px;
   }
 }
 /*# sourceMappingURL=style.css.map */
