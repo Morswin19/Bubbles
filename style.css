@@ -12,7 +12,7 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
-  background-color: #cccccc;
+  background-color: #333333;
   min-height: 100vh;
   min-width: 100vw;
 }
@@ -37,8 +37,8 @@
     height: 0px;
   }
   to {
-    width: 36px;
-    height: 255px;
+    width: 279px;
+    height: 222px;
   }
 }
 
@@ -48,8 +48,8 @@
     height: 0px;
   }
   to {
-    width: 36px;
-    height: 255px;
+    width: 279px;
+    height: 222px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -8,7 +8,7 @@ const bubble_create = () => {
   let s = 100;
   let l = Math.round(Math.random() * 100);
   let bubbleNewColor = `hsl(${h},${s}%,${l}%)`;
-  let bubbleSize = Math.round(Math.random() * 100);
+  let bubbleSize = Math.round(Math.random() * 500);
   newBubble.style.background = bubbleNewColor;
   setTimeout(function() {
     if (bubbleSize < 15) bubbleSize = 15;
@@ -17,4 +17,7 @@ const bubble_create = () => {
   }, 1);
 };
 
-window.addEventListener('click', bubble_create);
+// window.addEventListener('click', bubble_create);
+setTimeout(() => {
+  setInterval(bubble_create, 200);
+}, 3000);
