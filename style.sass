@@ -3,10 +3,10 @@
     flex-wrap: wrap
 
 .bubble
-    min-width: 0px
-    min-height: 0px
+    width: 0px
+    height: 0px
     transition: 1s
-    animation: bubble-growth 1s forwards 1
+    // animation: bubble-growth 1s forwards 1
     border: 0px solid #7AD9FF
 
 @keyframes bubble-growth
@@ -14,5 +14,5 @@
         width: 0px
         height: 0px
     to
-        width: 100px
-        height: 100px
+        width: random(300) + px
+        height: random(300) + px

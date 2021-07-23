@@ -7,8 +7,13 @@ const bubble_create = () => {
   let h = Math.round(Math.random() * 360);
   let s = 100;
   let l = Math.round(Math.random() * 100);
-  let newColor = `hsl(${h},${s}%,${l}%)`;
-  newBubble.style.background = newColor;
+  let bubbleNewColor = `hsl(${h},${s}%,${l}%)`;
+  let bubbleSize = Math.round(Math.random() * 100) + 'px';
+  newBubble.style.background = bubbleNewColor;
+  setTimeout(function() {
+    newBubble.style.width = bubbleSize;
+    newBubble.style.height = bubbleSize;
+  }, 1);
 };
 
 window.addEventListener('click', bubble_create);
